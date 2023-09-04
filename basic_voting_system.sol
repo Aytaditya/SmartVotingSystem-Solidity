@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: Unlicesensed
 pragma solidity ^0.8.0;
 
 contract Voting {
@@ -21,14 +21,14 @@ contract Voting {
   }
 
   function newProposal(string memory _name) public {
-    require(msg.sender == owner, "Only the owner can add new proposals.");
+    require(msg.sender == owner, "Proposals can be added only by owners.");
     proposals.push(Proposal(_name, 0));
   }
 
   function vote(uint _proposalId) public {
-    require(_proposalId < proposals.length, "Invalid proposal ID.");
+    require(_proposalId < proposals.length, "ID is invalid");
     Voter storage voter = voters[msg.sender];
-    require(!voter.voted, "You have already voted.");
+    require(!voter.voted, "OOPs! You have voted");
 
     voter.voted = true;
     voter.vote = _proposalId;
