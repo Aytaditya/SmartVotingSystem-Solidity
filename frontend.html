@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan System</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h2>Blockchain Loan System</h2>
+        </div>
+        <div class="card-body">
+            <button id="getLoanAmount" class="btn btn-secondary">Get My Loan Amount</button>
+            <p class="mt-3">Loan Amount: <span id="loanAmount">0 ETH</span></p>
+            <input type="text" id="repayAmount" class="form-control" placeholder="Amount to repay...">
+            <button id="repayLoan" class="btn btn-success mt-2">Repay Loan</button>
+            <div id="status" class="mt-3"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="app.js"></script> <!-- >
+</body>
+</html>
